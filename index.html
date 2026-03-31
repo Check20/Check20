@@ -5,33 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check20 | Solidity Architect</title>
     <style>
-        :root { --bg: #050505; --neon: #00e6ff; --text: #e0e0e0; }
-        body { background: var(--bg); color: var(--text); font-family: sans-serif; display: flex; flex-direction: column; align-items: center; margin: 0; padding: 40px 0; background-image: radial-gradient(circle at top right, #001f3f, transparent); }
-        .container { width: 90%; max-width: 500px; text-align: center; }
-        .profile-pic { width: 100px; height: 100px; border-radius: 50%; border: 2px solid var(--neon); box-shadow: 0 0 15px var(--neon); margin-bottom: 20px; }
-        .bio { background: rgba(20,20,20,0.8); padding: 20px; border-radius: 15px; border: 1px solid #222; margin-bottom: 30px; font-size: 0.9rem; line-height: 1.6; }
-        .cta { display: block; background: linear-gradient(45deg, #0072ff, #00e6ff); color: #fff; text-decoration: none; padding: 18px; border-radius: 12px; font-weight: bold; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0, 230, 255, 0.3); }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; }
-        .card { background: #111; border: 1px solid #222; padding: 15px; border-radius: 12px; text-decoration: none; color: #fff; font-size: 0.8rem; transition: 0.3s; }
-        .card:hover { border-color: var(--neon); transform: translateY(-3px); }
-        h1 { font-size: 1.4rem; color: #fff; margin-bottom: 5px; }
-        .tag { color: var(--neon); font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 20px; display: block; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #050505; color: #fff; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 40px 20px; min-height: 100vh; }
+        .container { width: 100%; max-width: 450px; text-align: center; }
+        
+        /* Foto de Perfil con Neón */
+        .profile-pic { width: 110px; height: 110px; border-radius: 50%; border: 3px solid #00e6ff; box-shadow: 0 0 20px #00e6ff, inset 0 0 10px #00e6ff; margin-bottom: 20px; object-fit: cover; }
+        
+        h1 { font-size: 1.8rem; margin-bottom: 5px; letter-spacing: -1px; }
+        .tag { color: #00e6ff; font-size: 0.75rem; letter-spacing: 3px; font-weight: bold; margin-bottom: 30px; display: block; opacity: 0.8; }
+        
+        /* Bio Estilo Glassmorphism */
+        .bio { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); padding: 25px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 30px; font-size: 0.95rem; line-height: 1.6; color: #ccc; }
+        
+        /* Botón de TikTok Factory Ready */
+        .cta { display: block; background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%); color: #fff; text-decoration: none; padding: 20px; border-radius: 15px; font-weight: 800; font-size: 1.1rem; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(0, 210, 255, 0.4); transition: 0.3s; text-transform: uppercase; }
+        
+        /* Grid de Redes */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .card { background: #111; border: 1px solid #222; padding: 18px; border-radius: 15px; text-decoration: none; color: #fff; font-size: 0.85rem; font-weight: 600; transition: 0.3s; display: flex; align-items: center; justify-content: center; }
+        .card:hover { border-color: #00e6ff; background: #161616; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0, 230, 255, 0.1); }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://github.com/Check20.png" class="profile-pic" alt="Profile">
+        <img src="https://github.com/Check20.png" class="profile-pic" onerror="this.src='https://via.placeholder.com/150'">
+        
         <h1>Solidity Architect</h1>
         <span class="tag">ECOSYSTEM +57 • WEB3 AI</span>
+        
         <div class="bio">
-            Solidity Architect & AI Automation Engineer. Integrating progressive AI workflows with on-chain assets. Building the decentralized future on Polygon.
+            Solidity Architect & AI Automation Engineer. <br>
+            <strong>Founder of +57 Ecosystem</strong>. <br>
+            Integrating AI workflows with on-chain assets on Polygon.
         </div>
-        <a href="https://t.me/TU_TELEGRAM" class="cta">📥 GET FREE AI PROMPT GUIDE</a>
+
+        <a href="https://t.me/tu_usuario" class="cta">🚀 GET FREE PROMPT GUIDE</a>
+
         <div class="grid">
             <a href="https://github.com/Check20" class="card">GitHub Code</a>
             <a href="https://x.com/criptoganacol" class="card">X / Twitter</a>
             <a href="https://tiktok.com/@salm_520" class="card">TikTok 3D</a>
-            <a href="https://mexc.com" class="card">MEXC $20 Bonus</a>
+            <a href="https://mexc.com" class="card">MEXC Bonus</a>
         </div>
     </div>
 </body>
