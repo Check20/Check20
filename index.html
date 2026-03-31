@@ -3,67 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eeloik | +57 Ecosystem</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Solidity Architect & AI Automation Engineer | Founder +57 Ecosystem">
+    <title>Solidity Architect & AI Automation Engineer | +57 Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        :root { --cian: #00e6ff; --purple: #d11fff; --bg: #0a0a0a; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; display: flex; justify-content: center; padding: 10px; }
-        .app-container { width: 100%; max-width: 450px; background: #000; border: 1px solid #1a1a1a; border-radius: 40px; overflow: hidden; padding-bottom: 40px; }
-        
-        /* Banner Header */
-        .hero-banner { background: url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2832&auto=format&fit=crop') center; background-size: cover; padding: 40px 20px; text-align: center; border-bottom: 2px solid var(--cian); }
-        h1 { font-weight: 900; font-size: 1.6rem; line-height: 1.1; margin-bottom: 10px; }
-        .sub-text { font-size: 0.8rem; color: #aaa; }
-
-        /* Buttons & Socials */
-        .btn-main { display: block; background: linear-gradient(90deg, #a400e0, #00d2ff); padding: 20px; border-radius: 50px; text-decoration: none; color: white; font-weight: 800; text-align: center; margin: 20px; box-shadow: 0 0 20px rgba(0, 210, 255, 0.4); }
-        .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 20px; }
-        .btn-social { background: #111; border: 1px solid #222; padding: 15px; border-radius: 15px; text-decoration: none; color: white; font-size: 0.8rem; text-align: center; font-weight: 600; }
-
-        /* Strategic Partnerships Form */
-        .section-title { background: url('https://www.transparenttextures.com/patterns/dark-matter.png'), linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)); padding: 20px; text-align: center; font-weight: 900; margin: 30px 0 10px; text-transform: uppercase; letter-spacing: 2px; }
-        .form-container { background: #0c0c0c; margin: 20px; padding: 25px; border-radius: 20px; border: 1px solid #1a1a1a; }
-        input { width: 100%; background: #1a1a1a; border: 1px solid #333; padding: 15px; border-radius: 10px; color: white; margin-bottom: 10px; }
-        .btn-submit { width: 100%; background: white; color: black; border: none; padding: 15px; border-radius: 10px; font-weight: 900; text-transform: uppercase; cursor: pointer; }
-        
-        /* Footer Info */
-        .footer-tags { display: flex; justify-content: center; gap: 10px; font-size: 0.6rem; color: #555; margin-top: 20px; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        :root { --neon-cyan: #00f0ff; --neon-magenta: #ff00ff; }
+        body { font-family: 'Inter', system-ui, sans-serif; background: #000; }
+        .title-font { font-family: 'Space Grotesk', sans-serif; }
+        .hero-bg { background: radial-gradient(circle at center, #1a0033 0%, #000000 70%); }
+        .neon-text { text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-magenta); }
+        .neon-button { transition: all 0.3s ease; }
+        .neon-button:hover { box-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-magenta); transform: translateY(-2px); }
+        .card-glow { transition: all 0.4s ease; border: 1px solid rgba(255,255,255,0.1); }
+        .card-glow:hover { box-shadow: 0 0 30px var(--neon-cyan), 0 0 60px var(--neon-magenta); transform: scale(1.03); border-color: var(--neon-cyan); }
+        .particle-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
     </style>
 </head>
-<body>
-    <div class="app-container">
-        <div class="hero-banner">
-            <h1>Solidity Architect & AI Automation Engineer. Founder of the +57 Ecosystem</h1>
-            <p class="sub-text">Infraestructura descentralizada en Polygon Mainnet. Especializado en agentes neurales y seguridad de Smart Contracts.</p>
-        </div>
+<body class="text-white min-h-screen overflow-x-hidden">
+    <canvas id="particles" class="particle-bg"></canvas>
 
-        <a href="https://t.me/plus57_ecosystem" class="btn-main">Únete Gasless al Ecosistema 💳</a>
+    <section class="hero-bg min-h-screen flex items-center relative">
+        <div class="max-w-6xl mx-auto px-6 pt-12 pb-20 w-full">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-magenta-500 rounded-2xl flex items-center justify-center text-2xl font-bold text-black">+57</div>
+                    <span class="text-3xl font-bold title-font tracking-tighter">Ecosystem</span>
+                </div>
+                <a href="t.me/TQ_57" class="px-8 py-4 bg-gradient-to-r from-cyan-400 to-magenta-500 rounded-3xl font-semibold text-black flex items-center gap-2 hover:scale-105 transition">
+                    <i class="fa-solid fa-wallet"></i> Conectar Wallet
+                </a>
+            </div>
 
-        <div class="social-grid">
-            <a href="https://github.com/Check20" class="btn-social">GitHub</a>
-            <a href="https://x.com/criptoganacol" class="btn-social">X / Twitter</a>
-            <a href="https://tiktok.com/@salm_520" class="btn-social">TikTok 3D</a>
-            <a href="https://youtube.com/futbol_y_goles" class="btn-social">YouTube</a>
-        </div>
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-7xl font-extrabold title-font leading-tight mb-6 neon-text uppercase">
+                    Solidity Architect & AI<br>Automation Engineer
+                </h1>
+                <p class="text-3xl md:text-5xl font-bold text-cyan-300 mb-8">Founder +57 Ecosystem</p>
+                
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <span class="text-[10px] uppercase tracking-widest font-mono bg-emerald-400 text-black px-4 py-2 rounded-full font-bold">Auditado</span>
+                    <span class="text-[10px] uppercase tracking-widest font-mono border border-white/20 px-4 py-2 rounded-full">Verified on Polygon</span>
+                    <span class="text-[10px] uppercase tracking-widest font-mono bg-purple-400 text-black px-4 py-2 rounded-full font-bold">Account Abstraction Ready</span>
+                </div>
 
-        <div class="section-title">Strategic Partnerships 🤝</div>
-        
-        <div class="form-container">
-            <p style="font-size: 0.7rem; color: #888; text-align: center; margin-bottom: 15px;">Join the +57 Ecosystem. Leave your details for exclusive updates.</p>
-            <form action="https://formspree.io/f/TU_ID" method="POST">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="wallet" placeholder="Proyecto / Wallet Address">
-                <button type="submit" class="btn-submit">Initialize Partnership 🛡️</button>
-            </form>
+                <button class="neon-button w-full md:w-auto px-12 py-7 text-2xl font-black rounded-3xl bg-gradient-to-r from-cyan-400 to-magenta-500 text-black flex items-center justify-center gap-4 mx-auto uppercase italic">
+                    <i class="fa-solid fa-bolt"></i> Únete Gasless al Ecosistema
+                </button>
+                <p class="mt-4 text-cyan-400 font-mono text-sm tracking-widest">ZERO GAS FEES • LIVE ON MAINNET</p>
+            </div>
         </div>
+    </section>
 
-        <div class="footer-tags">
-            <span>Audit Code ⚙️</span>
-            <span>Verify Asset 💎</span>
-            <span>Join Network 🚀</span>
+    <section class="py-24 bg-black/90 border-y border-white/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-black title-font mb-10 text-center uppercase tracking-tighter">Sobre el fundador</h2>
+            <div class="text-xl leading-relaxed text-gray-300 text-center italic">
+                "Ingeniería descentralizada de alto rendimiento en Polygon. Fusionando agentes autónomos de IA con seguridad de nivel institucional para dominar la nueva era on-chain."
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="py-20 bg-black">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12 uppercase tracking-widest">Connect with the Infra</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <a href="https://t.me/TQ_57" class="neon-button bg-[#0088cc] rounded-2xl py-6 flex items-center justify-center gap-3 text-xl font-bold"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                <a href="https://x.com/criptoganacol" class="neon-button bg-white text-black rounded-2xl py-6 flex items-center justify-center gap-3 text-xl font-bold"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                <a href="https://github.com/Check20" class="neon-button bg-[#24292e] rounded-2xl py-6 flex items-center justify-center gap-3 text-xl font-bold"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.tiktok.com/@salm_520" class="px-8 py-3 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition">TikTok 3D</a>
+                <a href="https://youtube.com/@futbolygoles20" class="px-8 py-3 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition">YouTube Studio</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black border-t border-white/10 py-16">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-8 mb-8 text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
+                <span>Audit Code</span><span>Verify Asset</span><span>Join Network</span>
+            </div>
+            <p class="text-[10px] font-mono text-gray-600 uppercase">Built on Polygon • Powered by AI Agents • © 2026 +57 Ecosystem</p>
+        </div>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        class Particle {
+            constructor() { this.x = Math.random()*canvas.width; this.y = Math.random()*canvas.height; this.size = Math.random()*2; this.sx = Math.random()*0.4-0.2; this.sy = Math.random()*0.4-0.2; }
+            update() { this.x += this.sx; this.y += this.sy; if(this.x<0||this.x>canvas.width)this.sx*=-1; if(this.y<0||this.y>canvas.height)this.sy*=-1; }
+            draw() { ctx.fillStyle = 'rgba(0,240,255,0.5)'; ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fill(); }
+        }
+        function init() { resize(); for(let i=0;i<100;i++) particles.push(new Particle()); animate(); }
+        function animate() { ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(animate); }
+        window.onload = init; window.onresize = resize;
+    </script>
 </body>
 </html>
