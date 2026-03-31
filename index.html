@@ -3,112 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eeloik | Solidity Architect</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Eeloik | +57 Ecosystem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #000000; --text: #ffffff; --cian: #00e6ff; --purple: #d11fff; --cian-glow: rgba(0, 230, 255, 0.4); --purple-glow: rgba(209, 31, 255, 0.4); --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.08); }
+        :root { --cian: #00e6ff; --purple: #d11fff; --bg: #0a0a0a; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; background-image: radial-gradient(circle at 50% -20%, #1a1a1a, #000); display: flex; justify-content: center; min-height: 100vh; padding: 20px; -webkit-font-smoothing: antialiased; }
-        .wrapper { width: 100%; max-width: 450px; display: flex; flex-direction: column; align-items: center; position: relative; }
-        header { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0 40px; }
-        .logo-group { display: flex; align-items: center; gap: 10px; }
-        .logo-icon { width: 25px; height: 25px; border-radius: 50%; border: 1.5px solid #fff; position: relative; }
-        .logo-icon::after { content: '🌐'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; }
-        .brand-name { font-weight: 800; font-size: 1.3rem; }
-        .menu-icon { font-size: 1.5rem; cursor: pointer; }
-        .profile-area { position: relative; width: 120px; height: 120px; margin-bottom: 25px; }
-        .profile-pic { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
-        .cian-ring { position: absolute; top: -10px; left: -10px; width: 140px; height: 140px; border-radius: 50%; border: 3px solid var(--cian); box-shadow: 0 0 25px var(--cian-glow), inset 0 0 15px var(--cian-glow); }
-        h1 { font-size: 1.8rem; font-weight: 800; line-height: 1.2; text-align: center; margin-bottom: 10px; letter-spacing: -1px; }
-        .tech-tags { color: #888; font-size: 0.8rem; text-align: center; margin-bottom: 25px; line-height: 1.5; }
-        .big-cta { width: 100%; background: linear-gradient(135deg, #a400e0 0%, #1b89ff 100%); color: #fff; text-decoration: none; padding: 20px; border-radius: 50px; font-weight: 800; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; box-shadow: 0 10px 30px rgba(164, 0, 224, 0.3), 0 0 15px var(--cian-glow); transition: 0.3s; }
-        .big-cta:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(164, 0, 224, 0.4), 0 0 20px var(--cian-glow); }
-        .sub-link { color: #555; font-size: 0.75rem; text-decoration: none; margin-top: -30px; margin-bottom: 35px; display: block; text-align: center; }
-        .bio { width: 100%; background: var(--glass); backdrop-filter: blur(10px); padding: 25px; border-radius: 20px; border: 1px solid var(--border); margin-bottom: 35px; }
-        .bio h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; color: #aaa; margin-bottom: 15px; }
-        .bio p { font-size: 0.95rem; line-height: 1.6; color: #ccc; }
-        .social-row { width: 100%; display: flex; gap: 15px; margin-bottom: 35px; }
-        .social-btn { flex: 1; padding: 18px; border-radius: 50px; text-decoration: none; color: #fff; font-weight: 700; text-align: center; font-size: 0.9rem; transition: 0.3s; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); }
-        .social-btn:hover { transform: translateY(-3px); }
-        .social-btn.primary { background: var(--purple); box-shadow: 0 5px 20px var(--purple-glow); border-color: transparent; }
-        .social-btn.secondary { background: rgba(255,255,255,0.05); }
-        .minor-social { width: 100%; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 35px; justify-content: center; }
-        .minor-btn { padding: 10px 20px; border-radius: 50px; border: 1px solid #333; color: #aaa; text-decoration: none; font-size: 0.8rem; font-weight: 600; background: #0c0c0c; transition: 0.3s; }
-        .minor-btn:hover { border-color: var(-- Cian); color: #fff; }
-        .resource-card { width: 100%; background: var(--glass); border: 1px solid var(--border); border-radius: 20px; padding: 25px; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
-        .resource-header { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; }
-        .resource-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border: 1px solid rgba(255,255,255,0.1); }
-        .resource-title { font-size: 1.1rem; font-weight: 700; }
-        .resource-copy { font-size: 0.9rem; color: #aaa; line-height: 1.5; }
-        .tag-pill { display: inline-block; padding: 5px 12px; border-radius: 50px; background: rgba(255,255,255,0.05); color: #888; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.1); }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; display: flex; justify-content: center; padding: 10px; }
+        .app-container { width: 100%; max-width: 450px; background: #000; border: 1px solid #1a1a1a; border-radius: 40px; overflow: hidden; padding-bottom: 40px; }
+        
+        /* Banner Header */
+        .hero-banner { background: url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2832&auto=format&fit=crop') center; background-size: cover; padding: 40px 20px; text-align: center; border-bottom: 2px solid var(--cian); }
+        h1 { font-weight: 900; font-size: 1.6rem; line-height: 1.1; margin-bottom: 10px; }
+        .sub-text { font-size: 0.8rem; color: #aaa; }
+
+        /* Buttons & Socials */
+        .btn-main { display: block; background: linear-gradient(90deg, #a400e0, #00d2ff); padding: 20px; border-radius: 50px; text-decoration: none; color: white; font-weight: 800; text-align: center; margin: 20px; box-shadow: 0 0 20px rgba(0, 210, 255, 0.4); }
+        .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 20px; }
+        .btn-social { background: #111; border: 1px solid #222; padding: 15px; border-radius: 15px; text-decoration: none; color: white; font-size: 0.8rem; text-align: center; font-weight: 600; }
+
+        /* Strategic Partnerships Form */
+        .section-title { background: url('https://www.transparenttextures.com/patterns/dark-matter.png'), linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)); padding: 20px; text-align: center; font-weight: 900; margin: 30px 0 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .form-container { background: #0c0c0c; margin: 20px; padding: 25px; border-radius: 20px; border: 1px solid #1a1a1a; }
+        input { width: 100%; background: #1a1a1a; border: 1px solid #333; padding: 15px; border-radius: 10px; color: white; margin-bottom: 10px; }
+        .btn-submit { width: 100%; background: white; color: black; border: none; padding: 15px; border-radius: 10px; font-weight: 900; text-transform: uppercase; cursor: pointer; }
+        
+        /* Footer Info */
+        .footer-tags { display: flex; justify-content: center; gap: 10px; font-size: 0.6rem; color: #555; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="logo-group">
-                <div class="logo-icon"></div>
-                <span class="brand-name">Eeloik</span>
-            </div>
-            <div class="menu-icon">☰</div>
-        </header>
-
-        <div class="profile-area">
-            <div class="cian-ring"></div>
-            <img src="https://github.com/Check20.png" class="profile-pic" alt="Check20 Profile">
+    <div class="app-container">
+        <div class="hero-banner">
+            <h1>Solidity Architect & AI Automation Engineer. Founder of the +57 Ecosystem</h1>
+            <p class="sub-text">Infraestructura descentralizada en Polygon Mainnet. Especializado en agentes neurales y seguridad de Smart Contracts.</p>
         </div>
 
-        <h1>Solidity Architect & AI Automation Engineer | Founder +57 Ecosystem</h1>
+        <a href="https://t.me/plus57_ecosystem" class="btn-main">Únete Gasless al Ecosistema 💳</a>
+
+        <div class="social-grid">
+            <a href="https://github.com/Check20" class="btn-social">GitHub</a>
+            <a href="https://x.com/criptoganacol" class="btn-social">X / Twitter</a>
+            <a href="https://tiktok.com/@salm_520" class="btn-social">TikTok 3D</a>
+            <a href="https://youtube.com/futbol_y_goles" class="btn-social">YouTube</a>
+        </div>
+
+        <div class="section-title">Strategic Partnerships 🤝</div>
         
-        <div class="tech-tags">
-            Infra descentralizada • Agentes AI autónomos • Puente AI-Web3 • Auditado • Verified on Polygon • Account Abstraction Ready
+        <div class="form-container">
+            <p style="font-size: 0.7rem; color: #888; text-align: center; margin-bottom: 15px;">Join the +57 Ecosystem. Leave your details for exclusive updates.</p>
+            <form action="https://formspree.io/f/TU_ID" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="wallet" placeholder="Proyecto / Wallet Address">
+                <button type="submit" class="btn-submit">Initialize Partnership 🛡️</button>
+            </form>
         </div>
 
-        <a href="https://check20.github.io/check20-web/gasless.html" class="big-cta">
-            Únete Gasless al Ecosistema <span>💳</span>
-        </a>
-        <span class="sub-link">Sin gas fees</span>
-
-        <div class="bio">
-            <h2>BIO</h2>
-            <p>Solidity Architect & AI Automation Engineer. Integrating progressive AI workflows with on-chain assets to dominate emerging markets. From contract audits to Account Abstraction, I build the infrastructure the ecosystem needs.</p>
+        <div class="footer-tags">
+            <span>Audit Code ⚙️</span>
+            <span>Verify Asset 💎</span>
+            <span>Join Network 🚀</span>
         </div>
-
-        <div class="social-row">
-            <a href="https://t.me/plus57_ecosystem" class="social-btn primary">Telegram</a>
-            <a href="https://x.com/criptoganacol" class="social-btn secondary">X</a>
-            <a href="https://github.com/plus57-auto-bot" class="social-btn secondary">GitHub</a>
-        </div>
-
-        <div class="minor-social">
-            <a href="https://github.com/Check20" class="minor-btn">Check20</a>
-            <a href="https://criptoganacol.com" class="minor-btn">criptoganacol</a>
-            <a href="https://tiktok.com/@salm_520" class="minor-btn">TikTok</a>
-            <a href="https://youtube.com/futbol_y_goles" class="minor-btn">YouTube</a>
-        </div>
-
-        <div class="tech-tags">Elite Resources & VIP Perks</div>
-
-        <div class="resource-card">
-            <div class="resource-header">
-                <div class="resource-icon" style="background: rgba(0, 114, 255, 0.1); color: #0072ff; border-color: rgba(0, 114, 255, 0.2);">M</div>
-                <span class="resource-title">The MEXC Global</span>
-            </div>
-            <p class="resource-copy">Institutional Liquidity • $20 Bonus</p>
-            <div><span class="tag-pill">Token-gated Access</span></div>
-        </div>
-
-        <div class="resource-card">
-            <div class="resource-header">
-                <div class="resource-icon" style="background: rgba(209, 31, 255, 0.1); color: #d11fff; border-color: rgba(209, 31, 255, 0.2);">P</div>
-                <span class="resource-title">PixVerse</span>
-            </div>
-            <p class="resource-copy">Neural Video Engine • Create AI Content</p>
-            <div><span class="tag-pill">Neural Engine Powered</span></div>
-        </div>
-
     </div>
 </body>
 </html>
