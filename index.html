@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check20 | Senior Solidity Architect & AI Automation</title>
+    <title>Check20 | Solidity Architect & AI Automation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;700;900&display=swap');
-        body { background-color: #0d001a; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        .hero-font { font-family: 'Space Grotesk', sans-serif; }
+        
+        :root { --cian: #00f0ff; --magenta: #ff00ff; --purple: #d11fff; --cian-glow: rgba(0, 240, 255, 0.4); --purple-glow: rgba(209, 31, 255, 0.4); }
+        body { background-color: #050505; color: #ffffff; font-family: 'Space Grotesk', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        
+        /* Vanguardist Full-Purple Radial Gradient Background */
         .master-bg { background-image: radial-gradient(circle at 50% 10%, #1a0033 0%, #0c0022 40%, #000000 80%); min-height: 100vh; position: relative; }
+        
+        /* Neon Particle Engine */
         #particles { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; pointer-events: none; }
         .content-wrapper { position: relative; z-index: 10; }
-        .title-glow { text-shadow: 0 0 15px #00f0ff, 0 0 30px #d11fff; }
-        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.3s; }
-        .cta-button { background: linear-gradient(135deg, #a400e0 0%, #1b89ff 100%); box-shadow: 0 10px 40px rgba(164, 0, 224, 0.4); }
+
+        .title-glow { text-shadow: 0 0 10px var(--cian), 0 0 20px var(--cian), 0 0 40px var(--purple); }
+        .glass-panel { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .cta-button { background: linear-gradient(135deg, #a400e0 0%, #1b89ff 100%); transition: 0.3s; box-shadow: 0 10px 30px rgba(164, 0, 224, 0.3), 0 0 15px var(--cian-glow); }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(164, 0, 224, 0.4), 0 0 20px var(--cian-glow); }
         
         /* Brand Colors for Grid */
         .color-tg { color: #26A5E4; }
@@ -25,8 +32,10 @@
         .color-tk { color: #ff0050; }
     </style>
 </head>
-<body class="master-bg flex justify-center py-6">
+<body class="master-bg flex justify-center py-6 relative">
+    
     <canvas id="particles"></canvas>
+    
     <div class="w-full max-w-[480px] px-6 content-wrapper">
         
         <header class="flex justify-center py-10">
@@ -36,13 +45,13 @@
             </div>
         </header>
 
-        <h1 class="text-4xl font-black leading-tight text-center mb-6 uppercase tracking-tighter title-glow hero-font">
-            SOLIDITY ARCHITECT<br>& AI ENGINEER
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-center mb-6 uppercase tracking-tighter title-glow hero-font">
+            Solidity Architect<br>& AI Engineer
         </h1>
         
         <div class="text-center mb-8">
-            <span class="text-xl font-bold">Founder +57 Ecosystem</span>
-            <span class="bg-purple-600/40 border border-purple-500 text-purple-200 text-[10px] font-bold px-3 py-1 rounded-full ml-2">POAP 🟣</span>
+            <span class="text-2xl font-bold">Founder +57 Ecosystem</span>
+            <span class="bg-gradient-to-br from-purple-500 to-pink-500 text-white text-[10px] font-bold px-3 py-1 rounded-full ml-3 flex-inline items-center gap-1">POAP 🟣</span>
         </div>
 
         <div class="flex justify-center gap-4 mb-8">
@@ -50,77 +59,67 @@
             <span class="bg-blue-900/30 text-blue-400 border border-blue-500/50 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Polygon Verified</span>
         </div>
 
-        <a href="https://t.me/TQ_57" class="cta-button w-full py-5 rounded-2xl text-white font-black text-xl flex items-center justify-center gap-3 no-underline uppercase italic mb-4">
-            JOIN GASLESS ECOSYSTEM <i class="fa-solid fa-bolt-lightning"></i>
+        <a href="https://t.me/TQ_57" class="cta-button w-full py-5 rounded-3xl text-white font-black text-xl flex items-center justify-center gap-3 no-underline uppercase italic mb-8 shadow-2xl">
+            JOIN GASLESS ECOSYSTEM <i class="fa-solid fa-bolt-lightning text-2xl"></i>
         </a>
         <div class="text-center text-[10px] text-zinc-500 uppercase tracking-widest mb-10">NO GAS FEES • ACCOUNT ABSTRACTION READY</div>
 
         <div class="mb-10">
             <h3 class="text-purple-500 text-xs font-bold uppercase tracking-[3px] mb-4">PROFESSIONAL DOSSIER</h3>
             <div class="border-l-2 border-purple-600 pl-4">
-                <p class="text-zinc-300 italic text-sm leading-relaxed">
-                    "Architecting high-performance decentralized infrastructure on Polygon. Merging Neural AI agents with institutional security to dominate on-chain asset management."
+                <p class="text-zinc-100 font-medium leading-snug">
+                    Solidity Architect & AI Automation Engineer. <br>
+                    Dominando mercados emergentes con infraestructura descentralizada de alto rendimiento y agentes neuronales de IA.
                 </p>
             </div>
         </div>
 
-        <div class="grid grid-cols-3 gap-3 mb-4">
-            <a href="https://t.me/TQ_57" class="glass-panel aspect-square flex flex-col items-center justify-center rounded-2xl no-underline">
-                <i class="fa-brands fa-telegram text-2xl color-tg mb-1"></i>
-                <span class="text-[9px] font-bold uppercase">Telegram</span>
+        <div class="grid grid-cols-3 gap-3 mb-4 social-matrix">
+            <a href="https://t.me/TQ_57" class="glass-panel aspect-square flex flex-col items-center justify-center rounded-2xl no-underline hover:bg-blue-600/20">
+                <i class="fa-brands fa-telegram text-4xl color-tg mb-2"></i>
+                <span class="text-[10px] font-bold uppercase tracking-widest">Telegram</span>
             </a>
-            <a href="https://x.com/criptoganacol" class="glass-panel aspect-square flex flex-col items-center justify-center rounded-2xl no-underline">
-                <i class="fa-brands fa-x-twitter text-2xl color-x mb-1"></i>
-                <span class="text-[9px] font-bold uppercase">Twitter</span>
+            <a href="https://x.com/criptoganacol" class="glass-panel aspect-square flex flex-col items-center justify-center rounded-2xl no-underline hover:bg-white/10">
+                <i class="fa-brands fa-x-twitter text-4xl color-x mb-2"></i>
+                <span class="text-[10px] font-bold uppercase tracking-widest">Twitter</span>
             </a>
-            <a href="https://github.com/Check20" class="glass-panel aspect-square flex flex-col items-center justify-center rounded-2xl no-underline">
-                <i class="fa-brands fa-github text-2xl color-gh mb-1"></i>
-                <span class="text-[9px] font-bold uppercase">Github</span>
+            <a href="https://github.com/Check20" class="glass-panel aspect-square flex flex-col items-center justify-center rounded-2xl no-underline hover:bg-white/10">
+                <i class="fa-brands fa-github text-4xl color-gh mb-2"></i>
+                <span class="text-[10px] font-bold uppercase tracking-widest">Github</span>
             </a>
         </div>
-        <div class="grid grid-cols-2 gap-3 mb-10">
-            <a href="https://www.tiktok.com/@salm_520?_r=1&_t=ZS-959LjYVov9Y" class="glass-panel py-4 rounded-full no-underline flex items-center justify-center gap-2">
+        <div class="grid grid-cols-2 gap-3 mb-10 social-submatrix">
+            <a href="https://www.tiktok.com/@salm_520?_r=1&_t=ZS-959LjYVov9Y" class="glass-panel py-4 rounded-full no-underline flex items-center justify-center gap-2 hover:bg-purple-600/20">
                 <i class="fa-brands fa-tiktok text-sm color-tk"></i>
                 <span class="text-[10px] font-bold uppercase tracking-widest">Tiktok 3D</span>
             </a>
-            <a href="https://youtube.com/@futbolygoles20?si=4Y-LkRniv4QHMJ3C" class="glass-panel py-4 rounded-full no-underline flex items-center justify-center gap-2">
+            <a href="https://youtube.com/@futbolygoles20?si=4Y-LkRniv4QHMJ3C" class="glass-panel py-4 rounded-full no-underline flex items-center justify-center gap-2 hover:bg-red-600/20">
                 <i class="fa-brands fa-youtube text-sm color-yt"></i>
                 <span class="text-[10px] font-bold uppercase tracking-widest">Youtube</span>
             </a>
         </div>
 
-        <div class="grid grid-cols-2 gap-3 mb-12">
-            <a href="https://promote.mexc.com/r/kDiPJwogm8" class="glass-panel p-5 rounded-3xl no-underline relative overflow-hidden">
-                <div class="flex items-center gap-2 mb-2">
-                    <div class="w-6 h-6 bg-cyan-500 rounded flex items-center justify-center font-bold text-black text-xs">M</div>
-                    <span class="text-[10px] font-bold">MEXC GLOBAL</span>
+        <div class="grid grid-cols-2 gap-3 mb-12 elite-resources">
+            <a href="https://promote.mexc.com/r/kDiPJwogm8" class="glass-panel p-5 rounded-3xl no-underline relative overflow-hidden group hover:border-cyan-500/50">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-8 h-8 bg-cyan-500 rounded flex items-center justify-center font-bold text-black text-xs">M</div>
+                    <span class="text-[11px] font-bold">MEXC GLOBAL</span>
                 </div>
-                <div class="text-[9px] text-emerald-400 font-bold uppercase tracking-tighter">$20 Bonus Active</div>
-                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-[10px] text-zinc-600"></i>
+                <div class="text-[10px] text-emerald-400 font-bold uppercase tracking-tighter">Bonus $20 Ready</div>
+                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-[10px] text-zinc-600 opacity-60"></i>
             </a>
-            <a href="https://share.pix.video/referral/ENUWB408" class="glass-panel p-5 rounded-3xl no-underline relative overflow-hidden">
-                <div class="flex items-center gap-2 mb-2">
-                    <div class="w-6 h-6 bg-purple-500 rounded flex items-center justify-center text-[10px] italic">✨</div>
-                    <span class="text-[10px] font-bold">PIXVERSE</span>
+            <a href="https://share.pix.video/referral/ENUWB408" class="glass-panel p-5 rounded-3xl no-underline relative overflow-hidden group hover:border-purple-500/50">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-8 h-8 bg-purple-500 rounded flex items-center justify-center text-[10px] italic">✨</div>
+                    <span class="text-[11px] font-bold">PIXVERSE</span>
                 </div>
-                <div class="text-[9px] text-zinc-400 uppercase tracking-tighter">Neural Engine</div>
-                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-[10px] text-zinc-600"></i>
+                <div class="text-[10px] text-purple-400 font-bold uppercase tracking-tighter">Neural Engine</div>
+                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-[10px] text-zinc-600 opacity-60"></i>
             </a>
         </div>
 
-        <div class="mb-10 text-center">
-            <h2 class="text-xl font-bold uppercase tracking-[4px] text-zinc-100 mb-6 italic">Strategic Partnership</h2>
-            <form action="https://formspree.io/f/TU_ID" method="POST" class="space-y-3">
-                <input type="text" name="name" placeholder="Entity Name / Wallet" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl text-white outline-none focus:border-purple-500 text-sm">
-                <input type="email" name="email" placeholder="Professional Email" required class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl text-white outline-none focus:border-purple-500 text-sm">
-                <button type="submit" class="cta-button w-full py-5 rounded-2xl text-white font-bold text-lg uppercase tracking-widest italic">
-                    INITIALIZE CONNECTION
-                </button>
-            </form>
-        </div>
-
-        <div class="text-center text-[9px] text-zinc-600 uppercase tracking-[0.5em] font-mono mb-10">
-            POLYGON MAINNET • NEURAL AGENTS • © 2026
+        <div class="text-center text-[10px] text-zinc-600 uppercase tracking-[0.5em] font-mono mb-10">
+            Polygon Mainnet • Neural Agents • Ecosystem +57 • © 2026
         </div>
     </div>
 
@@ -129,14 +128,15 @@
         const ctx = canvas.getContext('2d');
         let particles = [];
         function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-        class P {
-            constructor() { this.x = Math.random()*canvas.width; this.y = Math.random()*canvas.height; this.s = Math.random()*1.5; this.dx = Math.random()*0.4-0.2; this.dy = Math.random()*0.4-0.2; }
-            u() { this.x+=this.dx; this.y+=this.dy; if(this.x<0||this.x>canvas.width)this.dx*=-1; if(this.y<0||this.y>canvas.height)this.dy*=-1; }
-            d() { ctx.fillStyle='rgba(168,85,247,0.3)'; ctx.beginPath(); ctx.arc(this.x,this.y,this.s,0,Math.PI*2); ctx.fill(); }
+        class Particle {
+            constructor() { this.x = Math.random()*canvas.width; this.y = Math.random()*canvas.height; this.size = Math.random()*1.5; this.speedX = Math.random()*0.4-0.2; this.speedY = Math.random()*0.4-0.2; }
+            update() { this.x += this.speedX; this.y += this.speedY; if(this.x<0||this.x>canvas.width)this.dx*=-1; if(this.y<0||this.y>canvas.height)this.dy*=-1; }
+            draw() { ctx.fillStyle = 'rgba(168,85,247,0.3)'; ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fill(); }
         }
-        function animate() { ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p=>{p.u();p.d();}); requestAnimationFrame(animate); }
-        window.onload = () => { resize(); for(let i=0;i<60;i++)particles.push(new P()); animate(); };
-        window.onresize = resize;
+        function init() { resize(); for(let i=0;i<80;i++) particles.push(new Particle()); animate(); }
+        function animate() { ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(animate); }
+        window.onload = init; window.onresize = resize;
+        console.log('%c✅ Check20 Neural Ecosystem UI Live', 'color:#00f0ff; font-family:monospace; font-size:14px');
     </script>
 </body>
 </html>
