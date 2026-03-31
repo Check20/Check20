@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check20 | Solidity Architect & AI Automation</title>
+    <title>Check20 | Senior Solidity Architect & AI Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@500;700&display=swap');
         
         :root { --cian: #00f0ff; --magenta: #ff00ff; --purple: #d11fff; --cian-glow: rgba(0, 240, 255, 0.4); --purple-glow: rgba(209, 31, 255, 0.4); }
-        body { background-color: #050505; color: #ffffff; font-family: 'Space Grotesk', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .hero-font { font-family: 'Space Grotesk', sans-serif; }
         
         /* Vanguardist Full-Purple Radial Gradient Background */
         .master-bg { background-image: radial-gradient(circle at 50% 10%, #1a0033 0%, #0c0022 40%, #000000 80%); min-height: 100vh; position: relative; }
@@ -19,12 +20,17 @@
         #particles { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; pointer-events: none; }
         .content-wrapper { position: relative; z-index: 10; }
 
-        .title-glow { text-shadow: 0 0 10px var(--cian), 0 0 20px var(--cian), 0 0 40px var(--purple); }
-        .glass-panel { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .cta-button { background: linear-gradient(135deg, #a400e0 0%, #1b89ff 100%); transition: 0.3s; box-shadow: 0 10px 30px rgba(164, 0, 224, 0.3), 0 0 15px var(--cian-glow); }
-        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(164, 0, 224, 0.4), 0 0 20px var(--cian-glow); }
+        .title-glow { text-shadow: 0 0 15px var(--cian), 0 0 30px var(--purple); }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); transition: 0.3s; }
+        .glass-panel:hover { border-color: rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); }
         
-        /* Brand Colors for Grid */
+        /* CTA Buttons */
+        .cta-button-main { background: linear-gradient(135deg, #a400e0 0%, #1b89ff 100%); transition: 0.3s; box-shadow: 0 10px 40px rgba(164, 0, 224, 0.4); }
+        .cta-button-main:hover { transform: scale(1.02); }
+        .cta-button-contact { background: linear-gradient(90deg, #0088cc 0%, #00c6ff 100%); transition: 0.3s; box-shadow: 0 5px 20px rgba(0, 136, 204, 0.3); }
+        .cta-button-contact:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0, 136, 204, 0.4); }
+        
+        /* Brand Colors */
         .color-tg { color: #26A5E4; }
         .color-x { color: #FFFFFF; }
         .color-gh { color: #f0f6fc; }
@@ -45,81 +51,103 @@
             </div>
         </header>
 
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-center mb-6 uppercase tracking-tighter title-glow hero-font">
-            Solidity Architect<br>& AI Engineer
+        <h1 class="text-4xl font-black leading-tight text-center mb-6 uppercase tracking-tighter title-glow hero-font">
+            Solidity Architect<br>& AI Automation Engineer
         </h1>
         
         <div class="text-center mb-8">
             <span class="text-2xl font-bold">Founder +57 Ecosystem</span>
-            <span class="bg-gradient-to-br from-purple-500 to-pink-500 text-white text-[10px] font-bold px-3 py-1 rounded-full ml-3 flex-inline items-center gap-1">POAP 🟣</span>
+            <span class="bg-purple-600/40 border border-purple-500 text-purple-200 text-[10px] font-bold px-3 py-1 rounded-full ml-3">POAP 🟣</span>
         </div>
 
-        <div class="flex justify-center gap-4 mb-8">
-            <span class="bg-emerald-900/30 text-emerald-400 border border-emerald-500/50 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Audited</span>
-            <span class="bg-blue-900/30 text-blue-400 border border-blue-500/50 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Polygon Verified</span>
-        </div>
-
-        <a href="https://t.me/TQ_57" class="cta-button w-full py-5 rounded-3xl text-white font-black text-xl flex items-center justify-center gap-3 no-underline uppercase italic mb-8 shadow-2xl">
-            JOIN GASLESS ECOSYSTEM <i class="fa-solid fa-bolt-lightning text-2xl"></i>
+        <a href="https://t.me/plus57_ecosystem" class="cta-button-main w-full py-5 rounded-3xl text-white font-black text-xl flex items-center justify-center gap-3 no-underline uppercase italic mb-8">
+            Únete Gasless al Ecosistema <i class="fa-solid fa-bolt-lightning text-2xl"></i>
         </a>
-        <div class="text-center text-[10px] text-zinc-500 uppercase tracking-widest mb-10">NO GAS FEES • ACCOUNT ABSTRACTION READY</div>
 
-        <div class="mb-10">
-            <h3 class="text-purple-500 text-xs font-bold uppercase tracking-[3px] mb-4">PROFESSIONAL DOSSIER</h3>
-            <div class="border-l-2 border-purple-600 pl-4">
-                <p class="text-zinc-100 font-medium leading-snug">
-                    Solidity Architect & AI Automation Engineer. <br>
-                    Dominando mercados emergentes con infraestructura descentralizada de alto rendimiento y agentes neuronales de IA.
-                </p>
-            </div>
+        <div class="glass-panel p-6 rounded-2xl mb-8 border border-white/5">
+            <h2 class="uppercase text-xs tracking-[3px] text-zinc-500 font-medium mb-4">Dossier Técnico</h2>
+            <p class="text-lg font-medium leading-snug text-zinc-100">
+                Solidity Architect & AI Automation Engineer. <br>
+                Fusión de flujos de trabajo neuronales de IA con activos on-chain. Arquitectura de Smart Contracts y auditorías de seguridad en Polygon Mainnet.
+            </p>
         </div>
 
-        <div class="grid grid-cols-3 gap-3 mb-4 social-matrix">
-            <a href="https://t.me/TQ_57" class="glass-panel aspect-square flex flex-col items-center justify-center rounded-2xl no-underline hover:bg-blue-600/20">
-                <i class="fa-brands fa-telegram text-4xl color-tg mb-2"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest">Telegram</span>
-            </a>
-            <a href="https://x.com/criptoganacol" class="glass-panel aspect-square flex flex-col items-center justify-center rounded-2xl no-underline hover:bg-white/10">
-                <i class="fa-brands fa-x-twitter text-4xl color-x mb-2"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest">Twitter</span>
-            </a>
-            <a href="https://github.com/Check20" class="glass-panel aspect-square flex flex-col items-center justify-center rounded-2xl no-underline hover:bg-white/10">
-                <i class="fa-brands fa-github text-4xl color-gh mb-2"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest">Github</span>
-            </a>
-        </div>
-        <div class="grid grid-cols-2 gap-3 mb-10 social-submatrix">
-            <a href="https://www.tiktok.com/@salm_520?_r=1&_t=ZS-959LjYVov9Y" class="glass-panel py-4 rounded-full no-underline flex items-center justify-center gap-2 hover:bg-purple-600/20">
-                <i class="fa-brands fa-tiktok text-sm color-tk"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest">Tiktok 3D</span>
-            </a>
-            <a href="https://youtube.com/@futbolygoles20?si=4Y-LkRniv4QHMJ3C" class="glass-panel py-4 rounded-full no-underline flex items-center justify-center gap-2 hover:bg-red-600/20">
-                <i class="fa-brands fa-youtube text-sm color-yt"></i>
-                <span class="text-[10px] font-bold uppercase tracking-widest">Youtube</span>
-            </a>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3 mb-12 elite-resources">
-            <a href="https://promote.mexc.com/r/kDiPJwogm8" class="glass-panel p-5 rounded-3xl no-underline relative overflow-hidden group hover:border-cyan-500/50">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-8 h-8 bg-cyan-500 rounded flex items-center justify-center font-bold text-black text-xs">M</div>
-                    <span class="text-[11px] font-bold">MEXC GLOBAL</span>
+        <div class="grid grid-cols-1 gap-3 mb-10 social-grid">
+            <a href="https://t.me/plus57_ecosystem" class="glass-panel flex items-center gap-5 p-5 rounded-2xl no-underline">
+                <i class="fa-brands fa-telegram text-4xl color-tg"></i>
+                <div class="flex flex-col">
+                    <span class="text-lg font-black uppercase">Telegram Node</span>
+                    <span class="text-[10px] text-zinc-500 tracking-widest uppercase">Community & Alpha</span>
                 </div>
-                <div class="text-[10px] text-emerald-400 font-bold uppercase tracking-tighter">Bonus $20 Ready</div>
-                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-[10px] text-zinc-600 opacity-60"></i>
             </a>
-            <a href="https://share.pix.video/referral/ENUWB408" class="glass-panel p-5 rounded-3xl no-underline relative overflow-hidden group hover:border-purple-500/50">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-8 h-8 bg-purple-500 rounded flex items-center justify-center text-[10px] italic">✨</div>
-                    <span class="text-[11px] font-bold">PIXVERSE</span>
+            <a href="https://x.com/criptoganacol" class="glass-panel flex items-center gap-5 p-5 rounded-2xl no-underline">
+                <i class="fa-brands fa-x-twitter text-4xl color-x"></i>
+                <div class="flex flex-col">
+                    <span class="text-lg font-black uppercase">X / Twitter</span>
+                    <span class="text-[10px] text-zinc-500 tracking-widest uppercase">Tech Updates</span>
                 </div>
-                <div class="text-[10px] text-purple-400 font-bold uppercase tracking-tighter">Neural Engine</div>
-                <i class="fa-solid fa-arrow-up-right-from-square absolute top-4 right-4 text-[10px] text-zinc-600 opacity-60"></i>
+            </a>
+            <a href="https://github.com/Check20" class="glass-panel flex items-center gap-5 p-5 rounded-2xl no-underline">
+                <i class="fa-brands fa-github text-4xl color-gh"></i>
+                <div class="flex flex-col">
+                    <span class="text-lg font-black uppercase">GitHub</span>
+                    <span class="text-[10px] text-zinc-500 tracking-widest uppercase">Verified Repos</span>
+                </div>
+            </a>
+            <a href="https://youtube.com/@futbolygoles20" class="glass-panel flex items-center gap-5 p-5 rounded-2xl no-underline">
+                <i class="fa-brands fa-youtube text-4xl color-yt"></i>
+                <div class="flex flex-col">
+                    <span class="text-lg font-black uppercase">YouTube Studio</span>
+                    <span class="text-[10px] text-zinc-500 tracking-widest uppercase">3D Bitcoin Content</span>
+                </div>
+            </a>
+            <a href="https://www.tiktok.com/@salm_520" class="glass-panel flex items-center gap-5 p-5 rounded-2xl no-underline">
+                <i class="fa-brands fa-tiktok text-4xl color-tk"></i>
+                <div class="flex flex-col">
+                    <span class="text-lg font-black uppercase">TikTok 3D Feed</span>
+                    <span class="text-[10px] text-zinc-500 tracking-widest uppercase">Web3 Education</span>
+                </div>
             </a>
         </div>
 
-        <div class="text-center text-[10px] text-zinc-600 uppercase tracking-[0.5em] font-mono mb-10">
-            Polygon Mainnet • Neural Agents • Ecosystem +57 • © 2026
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10 elite-resources">
+            <a href="https://promote.mexc.com/r/kDiPJwogm8" class="glass-panel p-6 rounded-3xl no-underline group hover:border-cyan-500/50 flex items-center gap-4">
+                <div class="w-12 h-12 bg-cyan-500 rounded-xl flex items-center justify-center text-3xl font-black text-black">M</div>
+                <div class="flex flex-col flex-1">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-black text-xs uppercase tracking-wider text-zinc-400">Claim Bonus</span>
+                        <i class="fa-solid fa-up-right-from-square text-[10px] opacity-40"></i>
+                    </div>
+                    <span class="font-bold text-sm text-cyan-300">MEXC GLOBAL</span>
+                    <p class="text-[9px] text-emerald-400 font-mono tracking-tighter">Institutional Liquidity • $20 BONUS</p>
+                </div>
+            </a>
+            <a href="https://share.pix.video/referral/ENUWB408" class="glass-panel p-6 rounded-3xl no-underline group hover:border-purple-500/50 flex items-center gap-4">
+                <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-3xl font-black text-black">✨</div>
+                <div class="flex flex-col flex-1">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-black text-xs uppercase tracking-wider text-zinc-400">Activate Engine</span>
+                        <i class="fa-solid fa-up-right-from-square text-[10px] opacity-40"></i>
+                    </div>
+                    <span class="font-bold text-sm text-purple-300">PIXVERSE</span>
+                    <p class="text-[9px] text-purple-400 font-mono tracking-tighter">Neural Video Engine • AI Content</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="mb-10 text-center">
+            <h2 class="hero-text text-xl font-bold mb-5 uppercase tracking-widest text-zinc-400">strategic partnership</h2>
+            <a href="https://t.me/TU_USUARIO" class="cta-button-contact w-full h-16 rounded-3xl text-white font-black text-lg flex items-center justify-center gap-4 mx-auto no-underline shadow-lg uppercase tracking-wider italic">
+                Initialize Partnership (Gasless via AA) <i class="fa-brands fa-telegram-plane text-2xl"></i>
+            </a>
+        </div>
+
+        <div class="text-center text-[10px] text-zinc-600 uppercase tracking-[0.4em] font-mono mb-10 footer-tags">
+            Audit Code ⚙️ Verify Asset 💎 Join Network 🚀 POAP Claim 🟣
+        </div>
+        
+        <div class="text-center text-[10px] text-zinc-600 uppercase tracking-widest font-mono">
+            Built on Polygon Mainnet • Neural Agents • Ecosystem +57 • © 2026
         </div>
     </div>
 
@@ -127,16 +155,52 @@
         const canvas = document.getElementById('particles');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-        class Particle {
-            constructor() { this.x = Math.random()*canvas.width; this.y = Math.random()*canvas.height; this.size = Math.random()*1.5; this.speedX = Math.random()*0.4-0.2; this.speedY = Math.random()*0.4-0.2; }
-            update() { this.x += this.speedX; this.y += this.speedY; if(this.x<0||this.x>canvas.width)this.dx*=-1; if(this.y<0||this.y>canvas.height)this.dy*=-1; }
-            draw() { ctx.fillStyle = 'rgba(168,85,247,0.3)'; ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fill(); }
+        
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         }
-        function init() { resize(); for(let i=0;i<80;i++) particles.push(new Particle()); animate(); }
-        function animate() { ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(animate); }
-        window.onload = init; window.onresize = resize;
-        console.log('%c✅ Check20 Neural Ecosystem UI Live', 'color:#00f0ff; font-family:monospace; font-size:14px');
+        
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+            }
+            
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            
+            draw() {
+                ctx.fillStyle = 'rgba(0, 240, 255, 0.5)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+        
+        window.onload = function() {
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+            for (let i = 0; i < 80; i++) particles.push(new Particle());
+            animateParticles();
+            console.log('%c✅ Check20 Neural Ecosystem UI Live', 'color:#00f0ff; font-family:monospace; font-size:14px');
+        };
     </script>
 </body>
 </html>
