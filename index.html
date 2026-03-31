@@ -1,89 +1,113 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eeloik - Solidity Architect & AI Automation Engineer</title>
+    <title>Eeloik | Solidity Architect & AI Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-        :root { --tw-color-primary: #a855f7; }
-        * { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-        .hero-text { font-family: 'Space Grotesk', sans-serif; }
-        body { background: #000; color: #fff; }
-        .phone-frame { max-width: 420px; margin: 0 auto; background: linear-gradient(180deg, #0a0a0a, #1a0033); border-radius: 40px; overflow: hidden; position: relative; border: 1px solid #222; }
-        .space-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 50%); z-index: 0; overflow: hidden; }
-        .hexagon { position: absolute; width: 80px; height: 80px; background: rgba(168, 85, 247, 0.1); clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%); border: 2px solid rgba(168, 85, 247, 0.6); box-shadow: 0 0 25px #a855f7; animation: floatHex 20s infinite linear; z-index: 1; }
-        .hexagon.small { width: 50px; height: 50px; animation-duration: 15s; }
-        @keyframes floatHex { 0% { transform: translate(0, 0) rotate(0deg); } 100% { transform: translate(100px, -100px) rotate(360deg); } }
-        .glow-button { background: linear-gradient(90deg, #a855f7, #3b82f6); box-shadow: 0 0 25px rgba(168, 85, 247, 0.5); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap');
+        :root { --p: #a855f7; --s: #3b82f6; }
+        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .hero-font { font-family: 'Space Grotesk', sans-serif; }
+        .phone-frame { max-width: 430px; margin: 0 auto; background: linear-gradient(180deg, #050505 0%, #120025 100%); border-radius: 50px; position: relative; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 40px 100px -20px rgba(168, 85, 247, 0.2); }
+        .space-bg { position: absolute; inset: 0; z-index: 0; opacity: 0.6; pointer-events: none; }
+        .hexagon { position: absolute; width: 100px; height: 100px; background: rgba(168, 85, 247, 0.05); clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%); border: 1px solid rgba(168, 85, 247, 0.3); animation: float 20s infinite linear; }
+        @keyframes float { 0% { transform: translate(0,0) rotate(0deg); } 100% { transform: translate(100px, -100px) rotate(360deg); } }
+        .glow-btn { background: linear-gradient(90deg, var(--p), var(--s)); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .glow-btn:hover { transform: scale(1.02); box-shadow: 0 0 30px rgba(168, 85, 247, 0.6); }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
     </style>
 </head>
-<body class="bg-black py-8">
-    <div class="phone-frame relative z-10">
+<body class="py-10 px-4">
+    <div class="phone-frame relative overflow-hidden">
         <div class="space-bg">
-            <div class="hexagon" style="top: 10%; left: -5%;"></div>
-            <div class="hexagon small" style="top: 30%; left: 80%;"></div>
-            <div class="hexagon" style="top: 70%; left: -10%;"></div>
+            <div class="hexagon" style="top: 10%; left: -10%;"></div>
+            <div class="hexagon" style="top: 60%; left: 80%; width: 60px; height: 60px; animation-delay: -5s;"></div>
         </div>
-        
-        <div class="relative z-20 p-6 pt-12">
-            <div class="flex items-center justify-between mb-8">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-purple-600 font-bold">⚡</div>
-                    <h1 class="text-2xl font-bold tracking-tighter">Eeloik</h1>
+
+        <div class="relative z-10 p-8 pt-14">
+            <div class="flex justify-between items-center mb-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-purple-600 font-black shadow-lg">⚡</div>
+                    <span class="text-2xl font-bold tracking-tighter hero-font">Eeloik</span>
                 </div>
-                <i class="fa-solid fa-bars text-2xl"></i>
+                <div class="w-10 h-10 flex items-center justify-center rounded-full glass-card"><i class="fa-solid fa-bars-staggered"></i></div>
             </div>
 
-            <h2 class="hero-text text-4xl font-bold text-center mb-4">Solidity Architect & AI<br>Automation Engineer</h2>
-            <div class="text-center mb-6">
-                <span class="text-2xl font-bold">Founder +57 Ecosystem</span>
-                <span class="bg-purple-600 text-[10px] px-2 py-1 rounded-full ml-2">POAP 🟣</span>
+            <div class="text-center mb-10">
+                <h2 class="hero-font text-4xl font-extrabold leading-tight mb-2 uppercase tracking-tighter">Solidity Architect<br>& AI Engineer</h2>
+                <div class="flex items-center justify-center gap-3 mb-6">
+                    <span class="text-xl font-bold text-white/90">Founder +57 Ecosystem</span>
+                    <span class="bg-purple-600/30 border border-purple-500 text-purple-300 text-[10px] font-bold px-3 py-1 rounded-full uppercase">POAP 🟣</span>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2 mb-8">
+                    <span class="text-[9px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded-full">AUDITED</span>
+                    <span class="text-[9px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30 px-3 py-1 rounded-full">POLYGON VERIFIED</span>
+                </div>
+                
+                <a href="https://t.me/TQ_57" class="glow-btn w-full h-16 rounded-2xl flex items-center justify-center gap-4 text-lg font-black uppercase italic tracking-widest no-underline text-white">
+                    Join Gasless Ecosystem <i class="fa-solid fa-bolt-lightning"></i>
+                </a>
+                <p class="text-[10px] font-mono text-purple-400 mt-3 tracking-[0.3em]">NO GAS FEES • ACCOUNT ABSTRACTION READY</p>
             </div>
 
-            <p class="text-center text-purple-300 text-sm mb-8">
-                Infra descentralizada • Agentes AI autónomos • Puente AI-Web3<br>
-                <span class="text-emerald-400">Auditado • Verified on Polygon</span>
-            </p>
-
-            <a href="https://t.me/TQ_57" class="glow-button w-full py-4 rounded-2xl flex items-center justify-center gap-3 font-bold mb-8 no-underline text-white">
-                Únete Gasless al Ecosistema <i class="fa-solid fa-bolt"></i>
-            </a>
-
-            <div class="mb-8">
-                <p class="text-xs text-purple-400 mb-2 uppercase tracking-widest">BIO</p>
-                <p class="text-sm text-purple-100 leading-relaxed opacity-80 italic">
-                    Integrando flujos de trabajo de IA con activos on-chain para dominar los mercados emergentes. Desde auditorías hasta Abstracción de Cuenta.
+            <div class="mb-10">
+                <h3 class="text-[10px] font-bold text-purple-500 uppercase tracking-[0.4em] mb-3">Professional Dossier</h3>
+                <p class="text-sm text-gray-400 leading-relaxed italic border-l-2 border-purple-500 pl-4">
+                    "Architecting high-performance decentralized infrastructure on Polygon. Merging Neural AI agents with institutional security to dominate on-chain asset management."
                 </p>
             </div>
 
-            <div class="grid grid-cols-3 gap-2 mb-8">
-                <a href="https://t.me/TQ_57" class="bg-blue-600 py-3 rounded-xl text-center text-xs font-bold">Telegram</a>
-                <a href="https://x.com/criptoganacol" class="bg-white text-black py-3 rounded-xl text-center text-xs font-bold">X / Twitter</a>
-                <a href="https://github.com/Check20" class="bg-zinc-800 py-3 rounded-xl text-center text-xs font-bold">GitHub</a>
+            <div class="grid grid-cols-3 gap-3 mb-6">
+                <a href="https://t.me/TQ_57" class="glass-card py-5 rounded-2xl flex flex-col items-center gap-2 hover:bg-blue-600/20 transition">
+                    <i class="fa-brands fa-telegram text-xl text-blue-400"></i>
+                    <span class="text-[10px] font-bold uppercase">Telegram</span>
+                </a>
+                <a href="https://x.com/criptoganacol" class="glass-card py-5 rounded-2xl flex flex-col items-center gap-2 hover:bg-white/10 transition">
+                    <i class="fa-brands fa-x-twitter text-xl"></i>
+                    <span class="text-[10px] font-bold uppercase">Twitter</span>
+                </a>
+                <a href="https://github.com/Check20" class="glass-card py-5 rounded-2xl flex flex-col items-center gap-2 hover:bg-white/10 transition">
+                    <i class="fa-brands fa-github text-xl text-purple-400"></i>
+                    <span class="text-[10px] font-bold uppercase">GitHub</span>
+                </a>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-10">
+                <a href="https://www.tiktok.com/@salm_520" class="flex-1 glass-card py-3 rounded-full text-center text-[10px] font-bold uppercase hover:border-purple-500 transition">TikTok 3D</a>
+                <a href="https://youtube.com/@futbolygoles20" class="flex-1 glass-card py-3 rounded-full text-center text-[10px] font-bold uppercase hover:border-red-500 transition">YouTube</a>
             </div>
 
             <div class="grid grid-cols-2 gap-4 mb-10">
-                <div class="bg-zinc-900/80 border border-purple-500/30 p-4 rounded-2xl">
-                    <p class="font-bold text-sm">MEXC Global</p>
-                    <p class="text-[10px] text-emerald-400">$20 Bonus Ready</p>
+                <div class="glass-card p-5 rounded-3xl relative overflow-hidden group hover:border-cyan-500/50 transition">
+                    <div class="flex justify-between mb-4">
+                        <div class="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center font-bold">M</div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-40"></i>
+                    </div>
+                    <p class="font-bold text-xs mb-1">MEXC GLOBAL</p>
+                    <p class="text-[9px] text-emerald-400 font-mono tracking-tighter">$20 BONUS ACTIVE</p>
                 </div>
-                <div class="bg-zinc-900/80 border border-purple-500/30 p-4 rounded-2xl">
-                    <p class="font-bold text-sm">PixVerse</p>
-                    <p class="text-[10px] text-cyan-400">Neural Engine</p>
+                <div class="glass-card p-5 rounded-3xl relative overflow-hidden group hover:border-purple-500/50 transition">
+                    <div class="flex justify-between mb-4">
+                        <div class="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-xs">✨</div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-40"></i>
+                    </div>
+                    <p class="font-bold text-xs mb-1">PIXVERSE</p>
+                    <p class="text-[9px] text-purple-400 font-mono tracking-tighter">NEURAL ENGINE</p>
                 </div>
             </div>
 
             <form class="space-y-4 mb-10">
-                <input type="text" placeholder="Name" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl text-sm outline-none focus:border-purple-500">
-                <input type="email" placeholder="Email" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl text-sm outline-none focus:border-purple-500">
-                <button class="glow-button w-full py-4 rounded-xl font-bold">Initialize Partnership</button>
+                <h3 class="hero-font text-lg font-bold text-center mb-4">Strategic Partnership</h3>
+                <input type="text" placeholder="Entity Name / Wallet" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl text-xs focus:border-purple-500 outline-none transition">
+                <input type="email" placeholder="Professional Email" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl text-xs focus:border-purple-500 outline-none transition">
+                <button class="glow-btn w-full py-5 rounded-2xl font-black uppercase text-xs tracking-widest">Initialize Connection</button>
             </form>
 
-            <div class="text-center text-[10px] text-zinc-600 uppercase tracking-widest">
-                Built on Polygon • Powered by AI Agents
+            <div class="text-center">
+                <p class="text-[8px] font-mono text-zinc-600 uppercase tracking-[0.5em]">Polygon Mainnet • Neural Agents • © 2026 +57</p>
             </div>
         </div>
     </div>
