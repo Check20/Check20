@@ -1,5 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash
-echo "🚀 LANZANDO IMPERIO AUTOMÁTICO (TODO EN UNO)..."
+echo "⚙️ INSTALANDO DEPENDENCIAS (ESTO PUEDE TARDAR 2 MINUTOS)..."
+pkg update -y
+pkg install python ffmpeg -y
+pip install openai gtts moviepy requests Pillow
+
+echo "🚀 LANZANDO IMPERIO AUTOMÁTICO..."
 termux-wake-lock
 pkill python
 python brain.py &
