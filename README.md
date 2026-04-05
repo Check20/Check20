@@ -1,6 +1,3 @@
-cd ~/projects/Check20 || (mkdir -p ~/projects/Check20 && cd ~/projects/Check20)
-
-cat <<EOF > README.md
 # 🚀 Check20 | Solidity Architect & AI Automation
 
 Building the **+57 Ecosystem** on Polygon. Specialist in Blockchain Security and Neural Infrastructure.
