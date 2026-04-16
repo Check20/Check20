@@ -12,11 +12,6 @@ Building the **+57 Ecosystem** on Polygon. Specialist in Blockchain Security and
 - **Bags Affiliate Network:** On-chain marketing protocol.
 - **Cloudflare AI Integration:** High-performance inference engine.
 
-### 🌐 Digital Presence
-- **X:** [@criptoganacol](https://x.com/criptoganacol)
-- **Telegram:** [@TQ_57](https://t.me/TQ_57)
-- **TikTok:** [@salm_520](https://www.tiktok.com/@salm_520)
-
 ---
 *"Securing the future of decentralized automation."*
 EOF
